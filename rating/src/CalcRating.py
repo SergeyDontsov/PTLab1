@@ -1,14 +1,15 @@
 # -*- coding: utf-8 -*-
 from Types import DataType
-RatingsType = dict[str, float]
+
+RatingType = dict[str, float]
 
 
 class CalcRating:
     def __init__(self, data: DataType) -> None:
         self.data: DataType = data
-        self.rating: RatingsType = {}
+        self.rating: RatingType = {}
 
-    def calc(self) -> RatingsType:
+    def calc(self) -> RatingType:
         for key in self.data:
             self.rating[key] = 0.0
         for subject in self.data[key]:
